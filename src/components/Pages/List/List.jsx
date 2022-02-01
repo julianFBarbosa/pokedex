@@ -1,11 +1,14 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import { PokemonList } from "../../Organisms/PokemonList";
 
 export const List = () => {
+  const pokes = ["pikachu", "squirtle", "bulbassaur"];
+
   return (
     <div>
-      <p>List</p>
-      <Link to="/">Home</Link>
+      <Link to="">Home</Link>
+      <PokemonList pokes={pokes} />
       <Outlet />
     </div>
   );
