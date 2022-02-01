@@ -1,7 +1,5 @@
 import React from "react";
 
-const SearchField = () => {
+export const SearchField = () => {
   return <div></div>;
 };
-
-export default SearchField;
