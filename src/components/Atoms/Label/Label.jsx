@@ -1,7 +1,5 @@
 import React from "react";
 
-const Label = ({ value }) => {
+export const Label = ({ value }) => {
   return <label {...props}>{value}</label>;
 };
-
-export default Label;
