@@ -1,17 +1,16 @@
 import React from "react";
 import { BrowserRouter, Routes as RouteList, Route } from "react-router-dom";
-import { Home } from "./components/pages/Home";
-import { List } from "./components/pages/List";
-import { Profile } from "./components/pages/Profile";
+import { List } from "./components/Pages/List";
+import { Detail } from "./components/Pages/Detail";
 
 export const Routes = () => {
   return (
     <BrowserRouter>
       <RouteList>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<List />} />
         <Route path="pokemons">
           <Route index element={<List />}/>
-          <Route path=":id" end element={<Profile />} />
+          <Route path=":id" end element={<Detail />} />
         </Route>
       </RouteList>
     </BrowserRouter>
