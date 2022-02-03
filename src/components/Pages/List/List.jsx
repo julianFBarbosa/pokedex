@@ -1,5 +1,4 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
 import { PokemonList } from "../../Organisms/PokemonList";
 
 export const List = () => {
@@ -7,9 +6,7 @@ export const List = () => {
 
   return (
     <div>
-      <Link to="">Home</Link>
       <PokemonList pokes={pokes} />
-      <Outlet />
     </div>
   );
 };
