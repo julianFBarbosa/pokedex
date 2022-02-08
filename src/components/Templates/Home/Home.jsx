@@ -2,7 +2,7 @@ import React from "react";
 
 import { LogoLink } from "../../Molecules/LogoLink/LogoLink";
 import { Navbar } from "../../Molecules/Navbar";
-import { SearchField } from "../../Molecules/SearchField";
+import { InputGroup } from "../../Molecules/InputGroup";
 
 export const Home = ({ children }) => {
   return (
@@ -10,7 +10,7 @@ export const Home = ({ children }) => {
       <header>
         <LogoLink />
         <Navbar>
-          <SearchField />
+          <InputGroup />
         </Navbar>
       </header>
       {children}
