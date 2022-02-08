@@ -1,6 +1,10 @@
 import React from "react";
-import { Navbar } from "./Navbar.styles";
+import * as Nav from "./Navbar.styles";
 
 export const Navbar = ({ children }) => {
-  return <Navbar>{children}</Navbar>;
+  return (
+    <Nav.Wrapper>
+      <Nav.Container>{children}</Nav.Container>
+    </Nav.Wrapper>
+  );
 };
