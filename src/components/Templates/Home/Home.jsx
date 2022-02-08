@@ -9,9 +9,7 @@ export const Home = ({ children }) => {
     <div className="app-root">
       <Navbar>
         <LogoLink />
-        {/* <Navbar>
-          <InputGroup />
-        </Navbar> */}
+        <InputGroup label="Search Pokémon" />
       </Navbar>
       {children}
       <footer>
