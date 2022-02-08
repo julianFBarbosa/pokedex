@@ -1,11 +1,13 @@
 import React from "react";
 
-export const Input = ({ onChange, value, placeholder }) => {
+export const Input = ({ onChange, value, name, placeholder }) => {
   return (
     <input
-      onChange={onChange}
+      onChange={({ target }) => onChange(target.value)}
       value={value}
       placeholder={placeholder ? placeholder : ""}
+      name={name}
+      id={name}
     />
   );
 };

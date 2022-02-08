@@ -1,5 +1,5 @@
 import React from "react";
 
-export const Label = ({ value }) => {
-  return <label {...props}>{value}</label>;
+export const Label = ({ htmlFor, children }) => {
+  return <label htmlFor={htmlFor}>{children}</label>;
 };
