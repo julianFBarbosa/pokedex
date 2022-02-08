@@ -1,18 +1,18 @@
 import React from "react";
 
 import { LogoLink } from "../../Molecules/LogoLink/LogoLink";
-import { Navbar } from "../../Molecules/Navbar";
+import { Navbar } from "../../Organisms/Navbar";
 import { InputGroup } from "../../Molecules/InputGroup";
 
 export const Home = ({ children }) => {
   return (
     <div className="app-root">
-      <header>
+      <Navbar>
         <LogoLink />
-        <Navbar>
+        {/* <Navbar>
           <InputGroup />
-        </Navbar>
-      </header>
+        </Navbar> */}
+      </Navbar>
       {children}
       <footer>
         <p>footer</p>
