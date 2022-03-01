@@ -1,5 +1,13 @@
 import React from "react";
 
-export const SearchField = () => {
-  return <div></div>;
+import { InputGroup } from "../InputGroup";
+import { Button } from "../../Atoms/Button";
+
+export const SearchField = ({ placeholder, variant }) => {
+  
+  return (
+    <InputGroup variant={variant} placeholder={placeholder}>
+      <Button>Search</Button>
+    </InputGroup>
+  );
 };
