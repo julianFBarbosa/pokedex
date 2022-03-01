@@ -1,18 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import * as Styled from "./PokemonList.styles";
+import { PokemonItem } from "../PokemonItem";
 
-export const PokemonList = ({ pokes }) => {
+import { getPokemonList } from "../../../Api";
+
+export const PokemonList = () => {
+  const [pokemonData, setPokemonData] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const request = await getPokemonList(5);
+      const pokemonList = await request.results;
+
+      setPokemonData(pokemonList);
+    })();
+  }, []);
+
+  if (!pokemonData) return <div>Loading...</div>;
+
   return (
-    <div>
-      <p>List: </p>
-
-      <ul>
-        {pokes.map((poke) => (
-          <li key={poke}>
-            <Link to={`pokemons/${poke}`}>{poke}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Styled.PokemonList>
+      {pokemonData?.map((pokemonDataItem) => (
+        <PokemonItem
+          key={pokemonDataItem.name}
+          url={pokemonDataItem.url}
+          name={pokemonDataItem.name}
+        />
+      ))}
+    </Styled.PokemonList>
   );
 };
