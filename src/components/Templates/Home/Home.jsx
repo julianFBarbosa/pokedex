@@ -1,15 +1,15 @@
 import React from "react";
 
-import { LogoLink } from "../../Molecules/LogoLink/LogoLink";
+import { LogoLink } from "../../Molecules/LogoLink";
 import { Navbar } from "../../Organisms/Navbar";
-import { InputGroup } from "../../Molecules/InputGroup";
+import { SearchField } from "../../Molecules/SearchField";
 
 export const Home = ({ children }) => {
   return (
     <div className="app-root">
       <Navbar>
         <LogoLink />
-        <InputGroup label="Search Pokémon" />
+        <SearchField placeholder="Pokémon" variant="header" />
       </Navbar>
       {children}
       <footer>
