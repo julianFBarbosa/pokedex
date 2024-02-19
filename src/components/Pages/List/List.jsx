@@ -1,11 +1,11 @@
 import React from "react";
 import { PokemonList } from "../../Organisms/PokemonList";
-import { Home } from "../../Templates/Home";
+import { Container } from "../../Template/Container";
 
 export const List = () => {
   return (
-    <Home>
+    <Container>
       <PokemonList />
-    </Home>
+    </Container>
   );
 };

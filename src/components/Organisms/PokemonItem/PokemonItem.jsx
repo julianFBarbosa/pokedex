@@ -1,29 +1,15 @@
 import React, { useEffect, useState } from "react";
-import * as Styled from "./PokemonItem.styles";
+import * as S from "./PokemonItem.styles";
+import { extractId } from "../../../utils.js";
 
-import { getPokemonData } from "../../../Api";
-
-export const PokemonItem = ({ name }) => {
-  const [pokemonData, setPokemonData] = useState(null);
-
-  useEffect(() => {
-    (async () => {
-      const request = await getPokemonData(name);
-      console.log("request", request);
-
-      setPokemonData(request);
-    })();
-  }, []);
-
-  if (!pokemonData) return <p>Loading...</p>;
+export const PokemonItem = ({ name, url }) => {
+  const spriteUrl = extractId(url);
 
   return (
-    <Styled.PokemonItem>
-      <Styled.PokemonImage
-        src={pokemonData.sprites.other.home.front_default}
-        alt=""
-      />
-      <p>{pokemonData.name}</p>
-    </Styled.PokemonItem>
+    <S.Item>
+      <S.Image src={spriteUrl} alt="" />
+      <S.Name>{name}</S.Name>
+      <S.CTA to={`/pokemon/${name}`}>See Details</S.CTA>
+    </S.Item>
   );
 };

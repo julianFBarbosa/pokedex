@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as Styled from "./InputGroup.styles";
+import * as S from "./InputGroup.styles";
 
 import { Input } from "../../Atoms/Input";
 import { Label } from "../../Atoms/Label";
@@ -15,7 +15,7 @@ export const InputGroup = ({
   const [value, setValue] = useState("");
 
   return (
-    <Styled.Container>
+    <S.Container>
       {label && <Label htmlFor={name}>{label}</Label>}
       <Input
         value={value}
@@ -26,6 +26,6 @@ export const InputGroup = ({
         {...props}
       />
       {children}
-    </Styled.Container>
+    </S.Container>
   );
 };

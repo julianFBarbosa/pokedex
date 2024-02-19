@@ -8,7 +8,7 @@ export const Routes = () => {
     <BrowserRouter>
       <RouteList>
         <Route path="/" element={<List />} />
-        <Route path="pokemons/:id" element={<Detail />} />
+        <Route path="pokemon/:id" element={<Detail />} />
       </RouteList>
     </BrowserRouter>
   );

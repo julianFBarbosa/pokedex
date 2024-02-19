@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import * as Styled from "./PokemonList.styles";
+import * as S from "./PokemonList.styles";
 import { PokemonItem } from "../PokemonItem";
 
 import { getPokemonList } from "../../../Api";
@@ -7,9 +7,10 @@ import { getPokemonList } from "../../../Api";
 export const PokemonList = () => {
   const [pokemonData, setPokemonData] = useState([]);
 
+  
   useEffect(() => {
     (async () => {
-      const request = await getPokemonList(5);
+      const request = await getPokemonList();
       const pokemonList = await request.results;
 
       setPokemonData(pokemonList);
@@ -19,7 +20,7 @@ export const PokemonList = () => {
   if (!pokemonData) return <div>Loading...</div>;
 
   return (
-    <Styled.PokemonList>
+    <S.PokemonList>
       {pokemonData?.map((pokemonDataItem) => (
         <PokemonItem
           key={pokemonDataItem.name}
@@ -27,6 +28,6 @@ export const PokemonList = () => {
           name={pokemonDataItem.name}
         />
       ))}
-    </Styled.PokemonList>
+    </S.PokemonList>
   );
 };

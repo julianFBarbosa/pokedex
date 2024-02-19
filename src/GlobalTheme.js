@@ -3,7 +3,7 @@ export const colors = {
   primaryRedHover: "#E54222",
 };
 
-export const pokeTypeColors = [
+export const typeColors = [
   {
     name: "normal",
     color: "#A8A77A",

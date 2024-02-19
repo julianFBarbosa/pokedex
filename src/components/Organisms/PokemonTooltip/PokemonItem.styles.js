@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Item = styled.li`
+export const Tooltip = styled.li`
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -9,22 +8,20 @@ export const Item = styled.li`
   padding: 12px;
   transition: all 0.3s;
   background: #fff;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 `;
 
-export const Image = styled.img`
+export const PokemonImage = styled.img`
   width: 226px;
   max-width: 90%;
   margin: 0 auto;
   padding-bottom: 16px;
-  border-bottom: 1px solid #00000011;
+  border-bottom: 1px solid #00000047;
 `;
 
-export const Name = styled.p`
-  padding: 8px;
-  text-align: center;
-`;
-
-export const CTA = styled(Link)`
-  padding: 8px;
+export const Name = styled.img`
   text-align: center;
 `;
