@@ -6,8 +6,7 @@ export const Text = styled.p`
   padding: 8px 12px;
   border-radius: 4px;
   display: inline-block;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
+  transition: all 0.1s ease-in;
 
   &:hover {
     filter: brightness(85%);
