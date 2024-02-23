@@ -26,5 +26,15 @@ export const Name = styled.p`
 
 export const CTA = styled(Link)`
   padding: 8px;
+  background: #f2d52f;
+  color: #fff;
+  transition: all 0.3s;
   text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background: #ffe031;
+    color: #fff;
+  filter: brightness(100%);
+  }
 `;
